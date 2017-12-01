@@ -1,10 +1,4 @@
 ---
-- name: Install Google Chrome rpm from a remote repo
-  zypper:
-    name: '{{ google_chrome_url }}'
-    state: present
-    disable_gpg_check: yes
-
 - name: Unarchive a chromedriver that needs to be downloaded
   unarchive:
     src: '{{ chromedriver_url }}'
@@ -15,4 +9,3 @@
   copy:
     src: '{{ sample_script.name }}'
     dest: '{{ sample_script.path }}'
-

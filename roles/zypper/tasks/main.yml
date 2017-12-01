@@ -5,9 +5,18 @@
     state: latest
   when: zypper.all_update_flag 
 
-- name: install zypper packages
+- name: Install zypper packages
   zypper:
     name: '{{ item.name }}'
     state: '{{ item.state | default("present") }}'
     update_cache: yes
   with_items: '{{ zypper.packages }}'
+
+- name: Install rpm packages by zypper
+  zypper:
+    name: '{{ item.value.url }}'
+    state: '{{ item.value.state | default("present") }}'
+    disable_gpg_check: '{{ item.value.no_check | default("no") }}'
+    update_cache: yes
+  with_dict: '{{ zypper.rpm }}'
+

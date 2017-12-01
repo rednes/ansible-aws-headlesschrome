@@ -1,15 +1,22 @@
 ---
 zypper:
   all_update_flag: True
+
+  rpm:
+    python3_pip:
+      url: https://download.opensuse.org/repositories/Cloud:/OpenStack:/Master/SLE_12_SP3/noarch/python3-pip-9.0.1-12.19.noarch.rpm
+      no_check: yes
+    google_chrome:
+      url: https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+      no_check: yes
+
   packages:
     - name: wget
     - name: unzip
     - name: vim
     - name: git
     - name: python
-    - name: python-pip
+    - name: python3
     - name: lsb5
-    # - name: xdg-utils
-    # - name: libXss1
     - name: libgconfmm-2_6-1
     - name: ipa-gothic-fonts

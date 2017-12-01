@@ -5,7 +5,7 @@ AnsibleでAWS上にOpenSUSEでGoogle Chromeをヘッドレス実行可能な環�
 ## Overview
 
 - SeleniumのwebdriverでGoogle Chromeをヘッドレス実行してスクリーンショットを撮りたい
-- AWS EC2のOpenSUSE上で Python + Selenium + chromedriver を利用
+- AWS EC2のOpenSUSE上で Python3 + Selenium + chromedriver を利用
 - この環境をEC2インスタンスの作成からAnsibleで構築
 
 ![overview](https://qiita-image-store.s3.amazonaws.com/0/199081/e62f0d1a-fd35-a7a1-91da-317b67ca2c26.png)
@@ -73,12 +73,13 @@ $ ansible-playbook site.yml -v
 ### Check
 
 SSHで作成したEC2に接続し、ホームフォルダにあるsample.pyを実行してください。
+Google検索をしてその結果をスクリーンショットに撮るだけのスクリプトです。
 
 ```
-$ python sample.py
+$ python3 sample.py
 ```
 
 数秒で実行が完了し、同フォルダにscreenshot.pngが作成されます。
-こんな風にスクリーンショットが撮れていれば動作できていると思います。
+こんな風にスクリーンショットが撮れていれば正常に動作できていると思います。
 
 ![check](https://qiita-image-store.s3.amazonaws.com/0/199081/0431d4d8-4928-19b4-c31d-cd1678688877.png)
