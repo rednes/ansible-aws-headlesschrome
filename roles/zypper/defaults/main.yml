@@ -1,0 +1,15 @@
+---
+zypper:
+  all_update_flag: True
+  packages:
+    - name: wget
+    - name: unzip
+    - name: vim
+    - name: git
+    - name: python
+    - name: python-pip
+    - name: lsb5
+    # - name: xdg-utils
+    # - name: libXss1
+    - name: libgconfmm-2_6-1
+    - name: ipa-gothic-fonts

@@ -1,0 +1,13 @@
+---
+- name: Update all packages
+  zypper:
+    name: '*'
+    state: latest
+  when: zypper.all_update_flag 
+
+- name: install zypper packages
+  zypper:
+    name: '{{ item.name }}'
+    state: '{{ item.state | default("present") }}'
+    update_cache: yes
+  with_items: '{{ zypper.packages }}'

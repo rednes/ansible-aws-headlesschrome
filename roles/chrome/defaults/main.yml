@@ -1,0 +1,10 @@
+---
+google_chrome_url: https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+
+chromedriver_url: https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip
+
+chromedriver_path: /home/ec2-user/bin/
+
+sample_script:
+  name: sample.py
+  path: /home/ec2-user/
